@@ -22,6 +22,13 @@ def lines(word,wChar):
             str+="_"
     print(str)
 
+def main():
+    # game start 
+    #take Input
+    #check turn 
+    #Check Char 
+    #return ---- word
+
 
 lines("python","o")
 lines("python","p")
