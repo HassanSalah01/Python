@@ -1,35 +1,65 @@
-strArr = []
-solution = []
-word = "python"
+word = "hassan"
 
-for i in word:
-    strArr.append(i)
+z = ["s","a"]
+wordAsChar=[c for c in word]
+wordCheker=wordAsChar[:]
 
+# print(arr1)
+# print(arr2)
+def test():
+    count = 0
+    for i in z:
+        for j in range(len(word)):
+            if(i==word[j]):
+                wordCheker[j]=count
+        count+=1
+    return count
 
-print(strArr)
-def isRight(word,wChar):
-    for i in word:
-        if(i==wChar):
-            solution.append(i)
-            break
-
-def lines(word,wChar):
-    str =""
-    for i in range(len(word)):
-        if(word[i]==wChar):
-            str+=word[i]
-        else:
-            str+="_"
-    print(str)
-
+print(wordAsChar)
 def main():
-    # game start 
-    #take Input
-    #check turn 
-    #Check Char 
-    #return ---- word
+    
+
+    print(wordCheker)
+    sss= ""
+    for i in range(len(wordCheker)):
+    
+        # print(type(i))
+        if(type(wordCheker[i])==str):
+            # print("strrrrrrrr")
+            sss+="_"
+
+        else:
+            sss+=wordAsChar[i]
+
+    print(sss)
 
 
-lines("python","o")
-lines("python","p")
 
+
+main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#  for i in x :
+#         for j in z:
+#             # print(i,j)
+#             if(i==j):
+#                 arr2.append(i)
+#             else:
+#                  arr2.append("-")
+#     print(arr2)
