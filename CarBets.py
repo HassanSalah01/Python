@@ -24,3 +24,28 @@ def test4(x,value):
         arr.append(value)
     return arr
 
+def main():
+    
+    player = 2000
+    carNumber = 2
+    cont="y"
+    while(cont=="y" and player>0):
+        carBet = int(input())
+        betAmount = int(input())
+        x = test4(carNumber , 100)
+        while(test2(x)):
+            newArr = test(carNumber)
+            test3(x,newArr)
+            print(x)
+        if(carBet == x.index(min(x))+1):
+            player +=betAmount
+        else:
+            player -=betAmount
+        print(player,x.index(min(x))+1)
+        print("Want More Press yes")
+        cont =input()
+
+
+
+
+main()
