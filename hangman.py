@@ -1,6 +1,6 @@
 
 
-def test(wordSlice,word,wordCheker):
+def labelChar(wordSlice,word,wordCheker):
     count = 0
     for i in wordSlice:
         for j in range(len(word)):
@@ -8,7 +8,7 @@ def test(wordSlice,word,wordCheker):
                 wordCheker[j]=count
         count+=1
     
-def test2(wordCheker,wordAsChar):
+def showingWord(wordCheker,wordAsChar):
     newArray= ""
     for i in range(len(wordCheker)):
         if(type(wordCheker[i])==str):
@@ -17,11 +17,10 @@ def test2(wordCheker,wordAsChar):
             newArray+=wordAsChar[i]
     return newArray
 
-def test1(word,wordSlice,pInp,):
+def isCharRight(word,wordSlice,pInp,):
     for i in word :
         if(i==pInp):
             wordSlice.append(pInp)
-            print("tes")
             return True
     return False
 
@@ -33,24 +32,10 @@ def main():
     playerTrun = 3
     while(playerTrun):
         x = input()
-        if(test1(word,wordSlice,x)):
-            test(wordSlice,word,wordCheker)
-            print(test2(wordCheker,wordAsChar))
+        if(isCharRight(word,wordSlice,x)):
+            labelChar(wordSlice,word,wordCheker)
+            print(showingWord(wordCheker,wordAsChar))
         else:
             playerTrun-=1
             print("Wrong Input")
-
-    # test1(word,wordSlice,"a")
-    # test(wordSlice,word,wordCheker)
-    # print(test2(wordCheker,wordAsChar))
-
-
-
-    
-
- 
-
-
-
-
 main()
